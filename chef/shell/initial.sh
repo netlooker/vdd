@@ -7,10 +7,14 @@ cat "$VAGRANT_DIR/chef/shell/vdd.txt"
 
 # Upgrade Chef.
 echo "Updating Chef to 11.12.4 version. This may take a few minutes..."
+apt-add-repository -y ppa:brightbox/ruby-ng
+add-apt-repository ppa:ondrej/php5-5.6 -y &> /dev/null
+apt-get update -y &> /dev/null
+apt-get install python-software-properties -y &> /dev/null
 apt-get update &> /dev/null
 echo "sources updated"
 echo "installing ruby and chef"
-apt-get install build-essential ruby1.9.1-dev --no-upgrade --yes
+apt-get install build-essential ruby2.2 ruby2.2-dev --no-upgrade --yes
 update-ca-certificates
 gem install chef --version="11.12.4" --no-rdoc --no-ri --conservative
 echo "installed ruby and chef"
