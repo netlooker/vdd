@@ -6,35 +6,35 @@
       {
         "host_path": "data/",
         "guest_path": "/var/www",
-        "type": "default"
+        "type": "nfs"
       }
     ],
     "forwarded_ports": []
   },
   "vdd": {
     "sites": {
-      "drupal8": {
-        "account_name": "root",
-        "account_pass": "root",
+      "nept": {
+        "account_name": "admin",
+        "account_pass": "pass",
         "account_mail": "box@example.com",
-        "site_name": "Drupal 8",
+        "site_name": "Nexteuropa Platform",
         "site_mail": "box@example.com",
         "vhost": {
-          "document_root": "drupal8",
-          "url": "drupal8.dev",
-          "alias": ["www.drupal8.dev"]
+          "document_root": "platform-dev",
+          "url": "nept.dev",
+          "alias": ["www.nept.dev"]
         }
       },
-      "drupal7": {
-        "account_name": "root",
-        "account_pass": "root",
+      "dtt": {
+        "account_name": "admin",
+        "account_pass": "pass",
         "account_mail": "box@example.com",
-        "site_name": "Drupal 7",
+        "site_name": "DTT Site",
         "site_mail": "box@example.com",
         "vhost": {
-          "document_root": "drupal7",
-          "url": "drupal7.dev",
-          "alias": ["www.drupal7.dev"]
+          "document_root": "dtt",
+          "url": "dtt.dev",
+          "alias": ["www.dtt.dev"]
         }
       }
     }
