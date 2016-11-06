@@ -20,7 +20,7 @@
         "site_name": "Nexteuropa Platform",
         "site_mail": "box@example.com",
         "vhost": {
-          "document_root": "platform-dev",
+          "document_root": "platform-dev/build",
           "url": "nept.dev",
           "alias": ["www.nept.dev"]
         }
@@ -32,7 +32,7 @@
         "site_name": "DTT Site",
         "site_mail": "box@example.com",
         "vhost": {
-          "document_root": "dtt",
+          "document_root": "dtt/build",
           "url": "dtt.dev",
           "alias": ["www.dtt.dev"]
         }
