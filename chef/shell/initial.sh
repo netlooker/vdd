@@ -6,9 +6,9 @@ VAGRANT_DIR="/vagrant"
 cat "$VAGRANT_DIR/chef/shell/vdd.txt"
 
 # Upgrade Chef.
-echo "Updating Chef to 11.12.4 version. This may take a few minutes..."
+echo "Updating Chef and adding some stuff. This may take a few minutes..."
 apt-add-repository -y ppa:brightbox/ruby-ng
-add-apt-repository ppa:ondrej/php5-5.6 -y &> /dev/null
+add-apt-repository ppa:nhojohl/php5-zts -y &> /dev/null
 apt-get update -y &> /dev/null
 apt-get install python-software-properties -y &> /dev/null
 apt-get update &> /dev/null
